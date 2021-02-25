@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <!-- <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-automl"></script>
+    <script>
+      var loadFile = function(event) {
+        var image = document.getElementById('output');
+        image.src = URL.createObjectURL(event.target.files[0]);
+      run();
+      };
+      async function run() {
+            const model = await tf.automl.loadImageClassification('model.json');
+            const image = document.getElementById('output');
+            const predictions = await model.classify(image);
+          //const predictions = predictions.sort(function(a, b){return a-b});
+            console.log(predictions);
+      
+            // Show the resulting object on the page.
+          const pre = document.getElementById('result');
+            pre.textContent = JSON.stringify(predictions, null, 2);;
+          
+      
+              }
+        
+      
+      </script> -->
+
+    <!-- <div id="uploadDiv" class="hero-text">
+      <h1 style="font-size: 50px">Bulb Classifier</h1>
+      <h3>Upload a picture of a bulb to see what type it is!</h3>
+      <p>
+        <input
+          type="file"
+          accept="image/*"
+          name="image"
+          id="file"
+          onchange="loadFile(event)"
+          style="display: none"
+        />
+      </p>
+      <div id="demobox">
+        <p>
+          <label for="file" style="cursor: pointer">Upload your image</label>
+        </p>
+      </div>
+      <style>
+        #demobox {
+        border: 1px solid black;
+          background-color: #a5cca7;
+          color: white;
+          width: 200px;
+          height: 60px;
+          box-sizing: border-box;
+          font-size: 20px;
+          cursor: pointer; /* Add a pointer cursor on mouse-over */
+        }
+      </style>
+      <p><img id="output" width="200" /></p>
+      <div class="result" id="result"></div>
+    </div>
+
+    <script>
+      var loadFile = function (event) {
+        var image = document.getElementById("output");
+        image.src = URL.createObjectURL(event.target.files[0]);
+        run();
+      };
+      async function run() {
+        // console.log(`file:///Users/joshualovins/wavelength-model-12-21-20/src/model.json`);
+        const model = await tf.automl.loadImageClassification("model.json");
+        const image = document.getElementById("output");
+        const predictions = await model.classify(image);
+        //const predictions = predictions.sort(function(a, b){return a-b});
+        console.log(predictions);
+
+        // Show the resulting object on the page.
+        const pre = document.getElementById("result");
+        pre.textContent = JSON.stringify(predictions, null, 2);
+      }
+
+      let notHomeFlag = false;
+      console.log(window.location.href);
+      console.log(window.location.href.lastIndexOf("/"));
+      let lastIndex = window.location.href.lastIndexOf("/");
+      if (window.location.href[22] != undefined) {
+        notHomeFlag = true;
+      } else {
+        notHomeFlag = false;
+      }
+
+      if (notHomeFlag) {
+        document.getElementById("uploadDiv").style.display = "none";
+      } else {
+        document.getElementById("uploadDiv").style.display = "block";
+      }
+    </script>
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow/tfjs-automl"></script> -->
+  </body>
+</html>

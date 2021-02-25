@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: dotted; */
+  /* display: flex; */
+  }
+  .hero-image {
+  background-color: #cccccc;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* border: dotted; */
+  }
+  .hero-text {
+    /* display: flex; */
+    /* flex-direction: column; */
+    text-align: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    margin: 0 auto;
+    color: black;
+    width: 50%;
+    /* border: dotted; */
+  }
+  input[type=file] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  width: 200px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  border-style: solid white;
+  border-width: 2px;
+  border-radius: 2px;
+  }
+  input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  width: 200px;
+  font-size: 1.5em;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #DC143C;
+  border-radius: 4px;
+  }
+
+#demobox {
+border: 1px solid black;
+  background-color: #a5cca7;
+  color: white;
+  width: 200px;
+  height: 60px;
+  box-sizing: border-box;
+  font-size: 20px;
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
+}
+
+#cart-num {
+  display: inline-block;
+  position: relative;
+  top: -8px;
+  left: 0px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  background: lightcoral;
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
+}
