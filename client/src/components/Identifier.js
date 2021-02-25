@@ -79,14 +79,14 @@ function Identifier(props) {
     const predictions = await model.classify(image);
     console.log(predictions);
 
-    const maxProb = predictions.reduce((prev, current) => (prev.y > current.y) ? prev : current);
+    const maxProb = predictions.reduce((prev, current) => (prev.prob > current.prob) ? prev : current);
     console.log(maxProb);
     setMostLikely(maxProb);
 
     const notFirstPlace = predictions.filter(obj => obj != maxProb);
     console.log(notFirstPlace);
 
-    const secondPlace = notFirstPlace.reduce((prev, current) => (prev.y > current.y) ? prev : current);
+    const secondPlace = notFirstPlace.reduce((prev, current) => (prev.prob > current.prob) ? prev : current);
     console.log(secondPlace);
 
     setSecondMostLikely(secondPlace);
@@ -132,13 +132,20 @@ function Identifier(props) {
                 </Card>
             }
             <br />
-            <ImageCard 
-                uploadedImg={uploadedImg} 
-                mostLikely={mostLikely}
-                secondMostLikely={secondMostLikely} 
-                imagesObj={imagesObj}
-                addItem={cartContextValue.addItem}
-            />
+            {
+                mostLikely ?
+                <ImageCard 
+                    uploadedImg={uploadedImg} 
+                    mostLikely={mostLikely}
+                    secondMostLikely={secondMostLikely} 
+                    imagesObj={imagesObj}
+                    addItem={cartContextValue.addItem}
+                />
+                :
+                (
+                    uploadedImg && <div style={{marginBottom: "100px"}}>This may take a few seconds...</div>
+                )
+            }
         </div>  
 //     </CartContext.Provider>
 //   </div>
